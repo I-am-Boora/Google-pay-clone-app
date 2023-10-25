@@ -7,10 +7,10 @@ const SinglePerson = ({ name, image }) => {
     <View>
       <View style={styles.imageContainer}>
         <Image source={image} style={styles.image} />
-        <Text style={styles.text} numberOfLines={1}>
-          {name}
-        </Text>
       </View>
+      <Text style={styles.text} numberOfLines={1}>
+        {name}
+      </Text>
     </View>
   );
 };
@@ -19,15 +19,15 @@ export default SinglePerson;
 
 const styles = StyleSheet.create({
   imageContainer: {
-    width: scale(70),
-    height: verticalScale(70),
-    borderRadius: scale(35),
-    flex: 1,
+    // width: scale(60),
+    // height: verticalScale(60),
+    // borderRadius: 30,
+    // flex: 1,
   },
   image: {
-    width: scale(70),
-    height: verticalScale(70),
-    borderRadius: scale(35),
+    width: scale(60),
+    height: verticalScale(60),
+    borderRadius: scale(30),
     resizeMode: "cover",
     borderWidth: scale(1),
     borderColor: "grey",

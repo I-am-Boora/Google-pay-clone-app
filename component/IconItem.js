@@ -25,17 +25,16 @@ const styles = StyleSheet.create({
     height: verticalScale(70),
     alignContent: "center",
     alignItems: "center",
-    // backgroundColor: "red",
   },
   image: {
-    width: scale(24),
-    height: verticalScale(24),
+    width: scale(22),
+    height: verticalScale(22),
     resizeMode: "contain",
   },
   text: {
     paddingTop: verticalScale(10),
     textAlign: "center",
-    fontWeight: "500",
+    fontWeight: "400",
     color: "grey",
   },
 });

@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Pressable,
+  Dimensions,
+} from "react-native";
 import React, { useState, useEffect } from "react";
 import { scale, verticalScale } from "react-native-size-matters";
 import { axios } from "axios";
@@ -7,45 +14,101 @@ import { Entypo } from "@expo/vector-icons";
 const People = () => {
   const [user, setUser] = useState([]);
   const [isClick, setIsClick] = useState(false);
-  const peopleData = [{}];
+  const width = Dimensions.get("window").width;
 
   return (
     <View>
       <Text style={styles.title}>People</Text>
       <View style={styles.container}>
-        <SinglePerson
-          name="Janny "
-          image={require("../assets/images/userprofile.jpeg")}
-        />
-        <SinglePerson
-          name="Janny "
-          image={require("../assets/images/userprofile.jpeg")}
-        />
-        <SinglePerson
-          name="Janny "
-          image={require("../assets/images/userprofile.jpeg")}
-        />
-        <SinglePerson
-          name="Janny "
-          image={require("../assets/images/userprofile.jpeg")}
-        />
-        <SinglePerson
-          name="Janny "
-          image={require("../assets/images/userprofile.jpeg")}
-        />
-        <SinglePerson
-          name="Janny "
-          image={require("../assets/images/userprofile.jpeg")}
-        />
-        <SinglePerson
-          name="Janny "
-          image={require("../assets/images/userprofile.jpeg")}
-        />
+        <View style={{ width: width / 5 }}>
+          <View style={styles.bussinessIcon}>
+            <Image
+              source={require("../assets/images/userprofile.jpeg")}
+              style={styles.bussinessIcon}
+            />
+            <Text style={styles.bussinessName} numberOfLines={1}>
+              janny
+            </Text>
+          </View>
+        </View>
+        <View style={{ width: width / 5 }}>
+          <View style={styles.bussinessIcon}>
+            <Image
+              source={require("../assets/images/userprofile.jpeg")}
+              style={styles.bussinessIcon}
+            />
+            <Text style={styles.bussinessName} numberOfLines={1}>
+              janny
+            </Text>
+          </View>
+        </View>
+        <View style={{ width: width / 5 }}>
+          <View style={styles.bussinessIcon}>
+            <Image
+              source={require("../assets/images/userprofile.jpeg")}
+              style={styles.bussinessIcon}
+            />
+            <Text style={styles.bussinessName} numberOfLines={1}>
+              janny
+            </Text>
+          </View>
+        </View>
+        <View style={{ width: width / 5 }}>
+          <View style={styles.bussinessIcon}>
+            <Image
+              source={require("../assets/images/userprofile.jpeg")}
+              style={styles.bussinessIcon}
+            />
+            <Text style={styles.bussinessName} numberOfLines={1}>
+              janny
+            </Text>
+          </View>
+        </View>
+        <View style={{ width: width / 5 }}>
+          <View style={styles.bussinessIcon}>
+            <Image
+              source={require("../assets/images/userprofile.jpeg")}
+              style={styles.bussinessIcon}
+            />
+            <Text style={styles.bussinessName} numberOfLines={1}>
+              janny
+            </Text>
+          </View>
+        </View>
+        <View style={{ width: width / 5 }}>
+          <View style={styles.bussinessIcon}>
+            <Image
+              source={require("../assets/images/userprofile.jpeg")}
+              style={styles.bussinessIcon}
+            />
+            <Text style={styles.bussinessName} numberOfLines={1}>
+              janny
+            </Text>
+          </View>
+        </View>
+        <View style={{ width: width / 5 }}>
+          <View style={styles.bussinessIcon}>
+            <Image
+              source={require("../assets/images/userprofile.jpeg")}
+              style={styles.bussinessIcon}
+            />
+            <Text style={styles.bussinessName} numberOfLines={1}>
+              janny
+            </Text>
+          </View>
+        </View>
 
         <View style={{ alignItems: "center" }}>
           <Pressable
             onpress={() => setIsClick(!isClick)}
-            style={styles.iconContainer}
+            style={[
+              styles.bussinessIcon,
+              {
+                borderWidth: scale(1),
+                borderColor: "grey",
+                borderRadius: scale(25),
+              },
+            ]}
           >
             {isClick ? (
               <Entypo name="chevron-thin-up" size={24} color="#01579b" />
@@ -53,7 +116,7 @@ const People = () => {
               <Entypo name="chevron-thin-down" size={24} color="#01579b" />
             )}
           </Pressable>
-          <Text style={{ fontSize: scale(15), fontWeight: "500" }}>More</Text>
+          <Text style={{ fontSize: scale(13) }}>More</Text>
         </View>
       </View>
     </View>
@@ -67,24 +130,26 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     flexDirection: "row",
     flexWrap: "wrap",
-    columnGap: scale(10),
     rowGap: scale(40),
-    paddingHorizontal: scale(10),
-    justifyContent: "center",
-    paddingVertical: verticalScale(20),
-  },
-  iconContainer: {
-    borderWidth: scale(2),
-    width: scale(70),
-    height: verticalScale(70),
-    borderRadius: scale(35),
+    columnGap: scale(10),
+    paddingHorizontal: scale(20),
+    // justifyContent: "center",
+    marginVertical: verticalScale(30),
     alignItems: "center",
-    justifyContent: "center",
-    borderColor: "grey",
   },
   title: {
     fontSize: scale(20),
-    paddingHorizontal: scale(10),
-    // fontWeight: "500",
+    paddingHorizontal: scale(20),
+  },
+  bussinessIcon: {
+    width: scale(50),
+    height: scale(50),
+    borderRadius: scale(25),
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  bussinessName: {
+    marginTop: verticalScale(8),
+    fontSize: scale(13),
   },
 });

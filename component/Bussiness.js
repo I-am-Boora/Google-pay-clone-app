@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, View, Pressable, Image } from "react-native";
 import React, { useState } from "react";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import { colors } from "../constrait/color";
 import SinglePerson from "./SinglePerson";
 import { Entypo } from "@expo/vector-icons";
+import Promotions from "./Promotions";
 const Bussiness = () => {
   const [isClick, setIsClick] = useState(false);
   return (
@@ -14,7 +15,7 @@ const Bussiness = () => {
         <View style={styles.rightHeaderContainer}>
           <SimpleLineIcons
             name="handbag"
-            size={24}
+            size={18}
             color="black"
             style={{ paddingHorizontal: scale(5) }}
           />
@@ -22,23 +23,40 @@ const Bussiness = () => {
         </View>
       </View>
       <View style={styles.subContainer}>
-        <SinglePerson
-          name="Vi prepaid"
-          image={require("../assets/images/Vodafone_logo_PNG6.png")}
-        />
-        <SinglePerson
-          name="Jio postpaid"
-          image={require("../assets/images/Jio_logo_PNG4.png")}
-        />
-        <SinglePerson
-          name="Sweggy"
-          image={require("../assets/images/Swiggy_logo_PNG2.png")}
-        />
-
+        <View style={styles.bussinessIcon}>
+          <Image
+            source={require("../assets/images/Vodafone_logo_PNG6.png")}
+            style={styles.bussinessIcon}
+          />
+          <Text style={styles.bussinessName} numberOfLines={1}>
+            vi
+          </Text>
+        </View>
+        <View style={styles.bussinessIcon}>
+          <Image
+            source={require("../assets/images/Jio_logo_PNG4.png")}
+            style={styles.bussinessIcon}
+          />
+          <Text style={styles.bussinessName} numberOfLines={1}>
+            Jio postpaid
+          </Text>
+        </View>
+        <View style={styles.bussinessIcon}>
+          <Image
+            source={require("../assets/images/Swiggy_logo_PNG2.png")}
+            style={[styles.bussinessIcon, { borderWidth: scale(1) }]}
+          />
+          <Text style={styles.bussinessName} numberOfLines={1}>
+            Sweggy
+          </Text>
+        </View>
         <View style={{ alignItems: "center" }}>
           <Pressable
             onpress={() => setIsClick(!isClick)}
-            style={styles.iconContainer}
+            style={[
+              styles.bussinessIcon,
+              { borderWidth: scale(1), borderColor: "grey" },
+            ]}
           >
             {isClick ? (
               <Entypo name="chevron-thin-up" size={24} color="#01579b" />
@@ -46,7 +64,15 @@ const Bussiness = () => {
               <Entypo name="chevron-thin-down" size={24} color="#01579b" />
             )}
           </Pressable>
-          <Text style={{ fontSize: scale(15), fontWeight: "500" }}>More</Text>
+          <Text
+            style={{
+              fontSize: scale(14),
+              fontWeight: "400",
+              marginTop: scale(8),
+            }}
+          >
+            More
+          </Text>
         </View>
       </View>
     </View>
@@ -56,14 +82,15 @@ const Bussiness = () => {
 export default Bussiness;
 
 const styles = StyleSheet.create({
-  container: { paddingHorizontal: scale(10) },
+  container: {},
   title: {
     fontSize: scale(20),
+    // marginVertical: verticalScale(10),
   },
   headerContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginVertical: verticalScale(20),
+    paddingHorizontal: scale(20),
   },
   rightHeaderContainer: {
     flexDirection: "row",
@@ -71,14 +98,13 @@ const styles = StyleSheet.create({
     padding: moderateScale(8),
     borderRadius: scale(20),
   },
-  text: { fontSize: scale(16), fontWeight: "500" },
+  text: { fontSize: scale(14), fontWeight: "400" },
 
   subContainer: {
     backgroundColor: "white",
     flexDirection: "row",
     flexWrap: "wrap",
-    columnGap: scale(10),
-    rowGap: scale(40),
+    columnGap: scale(30),
     paddingHorizontal: scale(10),
     justifyContent: "center",
     alignItems: "center",
@@ -92,5 +118,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderColor: "grey",
+  },
+  bussinessIcon: {
+    width: scale(50),
+    height: scale(50),
+    borderRadius: scale(25),
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  bussinessName: {
+    marginTop: verticalScale(8),
+    fontSize: scale(13),
   },
 });

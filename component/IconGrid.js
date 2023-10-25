@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     columnGap: scale(10),
-    rowGap: scale(25),
+    rowGap: scale(18),
     paddingHorizontal: scale(10),
     justifyContent: "center",
     paddingTop: verticalScale(10),

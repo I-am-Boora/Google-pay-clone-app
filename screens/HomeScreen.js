@@ -6,6 +6,8 @@ import IconGrid from "../component/IconGrid";
 import People from "../component/People";
 import Bussiness from "../component/Bussiness";
 import BillRechagreRow from "../component/BillRechagreRow";
+import Promotions from "../component/Promotions";
+import { scale } from "react-native-size-matters";
 
 const HomeScreen = () => {
   return (
@@ -19,6 +21,7 @@ const HomeScreen = () => {
         <People />
         <Bussiness />
         <BillRechagreRow />
+        <Promotions />
       </ScrollView>
     </SafeAreaView>
   );
