@@ -9,6 +9,7 @@ import BillRechagreRow from "../component/BillRechagreRow";
 import Promotions from "../component/Promotions";
 import { scale } from "react-native-size-matters";
 import CardandloanSection from "../component/CardandloanSection";
+import Invite from "../component/Invite";
 
 const HomeScreen = () => {
   return (
@@ -24,6 +25,7 @@ const HomeScreen = () => {
         <BillRechagreRow />
         <Promotions />
         <CardandloanSection />
+        <Invite />
       </ScrollView>
     </SafeAreaView>
   );
