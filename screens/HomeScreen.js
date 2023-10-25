@@ -8,6 +8,7 @@ import Bussiness from "../component/Bussiness";
 import BillRechagreRow from "../component/BillRechagreRow";
 import Promotions from "../component/Promotions";
 import { scale } from "react-native-size-matters";
+import CardandloanSection from "../component/CardandloanSection";
 
 const HomeScreen = () => {
   return (
@@ -22,6 +23,7 @@ const HomeScreen = () => {
         <Bussiness />
         <BillRechagreRow />
         <Promotions />
+        <CardandloanSection />
       </ScrollView>
     </SafeAreaView>
   );

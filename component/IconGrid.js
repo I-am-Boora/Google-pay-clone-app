@@ -53,6 +53,6 @@ const styles = StyleSheet.create({
     rowGap: scale(18),
     paddingHorizontal: scale(10),
     justifyContent: "center",
-    paddingTop: verticalScale(10),
+    paddingTop: verticalScale(20),
   },
 });

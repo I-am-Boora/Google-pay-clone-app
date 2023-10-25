@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
 import React from "react";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import { colors } from "../constrait/color";
@@ -56,6 +56,19 @@ const BillRechagreRow = () => {
           image={require("../assets/images/toll-road.png")}
         />
       </View>
+      <Pressable
+        style={{
+          padding: moderateScale(8),
+          paddingHorizontal: scale(20),
+          alignSelf: "center",
+          borderWidth: scale(1),
+          borderRadius: scale(50),
+          borderColor: "grey",
+          marginVertical: verticalScale(10),
+        }}
+      >
+        <Text style={{ color: "#01579b", fontSize: scale(13) }}>See all</Text>
+      </Pressable>
     </View>
   );
 };
