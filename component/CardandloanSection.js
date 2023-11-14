@@ -1,11 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Pressable } from "react-native";
 import React from "react";
 import { AntDesign } from "@expo/vector-icons";
 import { scale, verticalScale } from "react-native-size-matters";
 import { MaterialIcons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+
 const CardandloanSection = () => {
+  const navigation = useNavigation();
   return (
     <>
       <Text style={styles.title}>Manage your money</Text>
@@ -71,7 +74,10 @@ const CardandloanSection = () => {
           </View>
           <Entypo name="chevron-small-right" size={24} color="black" />
         </View>
-        <View style={styles.balanceContainer}>
+        <Pressable
+          style={styles.balanceContainer}
+          onPress={() => navigation.navigate("Balance")}
+        >
           <View style={styles.iconAndText}>
             <MaterialCommunityIcons
               name="bank-outline"
@@ -89,7 +95,7 @@ const CardandloanSection = () => {
             </Text>
           </View>
           <Entypo name="chevron-small-right" size={24} color="black" />
-        </View>
+        </Pressable>
       </View>
     </>
   );

@@ -8,14 +8,17 @@ import {
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { scale, verticalScale } from "react-native-size-matters";
-import { axios } from "axios";
-import SinglePerson from "../component/SinglePerson";
 import { Entypo } from "@expo/vector-icons";
 const People = () => {
   const [user, setUser] = useState([]);
-  const [isClick, setIsClick] = useState(false);
+  const [isClick, setIsClick] = useState(true);
   const width = Dimensions.get("window").width;
+  const handleClick = () => {
+    setIsClick(!isClick);
+    console.log("clicked");
+  };
 
+  console.log("hello");
   return (
     <View>
       <Text style={styles.title}>People</Text>
@@ -100,7 +103,7 @@ const People = () => {
 
         <View style={{ alignItems: "center" }}>
           <Pressable
-            onpress={() => setIsClick(!isClick)}
+            onpress={handleClick}
             style={[
               styles.bussinessIcon,
               {
@@ -116,7 +119,9 @@ const People = () => {
               <Entypo name="chevron-thin-down" size={24} color="#01579b" />
             )}
           </Pressable>
-          <Text style={{ fontSize: scale(13) }}>More</Text>
+          <Text style={{ fontSize: scale(13), paddingTop: scale(5) }}>
+            More
+          </Text>
         </View>
       </View>
     </View>
