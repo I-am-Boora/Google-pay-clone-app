@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
 import BalanceScreen from "../screens/BalanceScreen";
 import BalancePassword from "../screens/BalancePassword";
+import MainBalance from "../screens/MainBalance";
 
 const StackNavigation = () => {
   const Stack = createStackNavigator();
@@ -22,6 +23,11 @@ const StackNavigation = () => {
       <Stack.Screen
         name="BalancePassword"
         component={BalancePassword}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="MainBalance"
+        component={MainBalance}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

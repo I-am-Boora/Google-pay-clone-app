@@ -7,7 +7,7 @@ import People from "../component/People";
 import Bussiness from "../component/Bussiness";
 import BillRechagreRow from "../component/BillRechagreRow";
 import Promotions from "../component/Promotions";
-import { scale } from "react-native-size-matters";
+import { scale, verticalScale } from "react-native-size-matters";
 import CardandloanSection from "../component/CardandloanSection";
 import Invite from "../component/Invite";
 
@@ -26,6 +26,15 @@ const HomeScreen = () => {
         <Promotions />
         <CardandloanSection />
         <Invite />
+        <Text
+          style={{
+            marginTop: verticalScale(25),
+            textAlign: "center",
+            marginBottom: verticalScale(10),
+          }}
+        >
+          Showing bussiness based on your location - Learn more
+        </Text>
       </ScrollView>
     </SafeAreaView>
   );

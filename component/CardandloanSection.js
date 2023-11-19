@@ -42,6 +42,7 @@ const CardandloanSection = () => {
         style={{
           paddingHorizontal: scale(20),
           marginVertical: verticalScale(30),
+          rowGap: scale(10),
         }}
       >
         <View style={styles.balanceContainer}>
@@ -50,8 +51,9 @@ const CardandloanSection = () => {
             <Text
               style={{
                 paddingLeft: scale(10),
-                fontSize: scale(14),
+                fontSize: scale(13),
                 fontWeight: "500",
+                color: "#424242",
               }}
             >
               Check your CIBIL score for free
@@ -65,8 +67,9 @@ const CardandloanSection = () => {
             <Text
               style={{
                 paddingLeft: scale(10),
-                fontSize: scale(14),
+                fontSize: scale(13),
                 fontWeight: "500",
+                color: "#424242",
               }}
             >
               Show transaction history
@@ -87,8 +90,9 @@ const CardandloanSection = () => {
             <Text
               style={{
                 paddingLeft: scale(10),
-                fontSize: scale(14),
+                fontSize: scale(13),
                 fontWeight: "500",
+                color: "#424242",
               }}
             >
               Check bank balance
@@ -105,9 +109,10 @@ export default CardandloanSection;
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: scale(20),
+    fontSize: scale(18),
     paddingHorizontal: scale(20),
     marginVertical: verticalScale(15),
+    color: "#424242",
   },
   container: {
     flexDirection: "row",
@@ -128,6 +133,7 @@ const styles = StyleSheet.create({
   balanceContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+
     marginBottom: verticalScale(15),
   },
   iconAndText: {

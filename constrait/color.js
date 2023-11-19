@@ -1,1 +1,6 @@
-export const colors = [{ primaryColor: "#81d4fa" }];
+export const colors = [
+  {
+    primaryColor: "#81d4fa",
+    lightBlack: "grey",
+  },
+];

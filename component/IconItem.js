@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { scale, verticalScale } from "react-native-size-matters";
+import { MaterialIcons } from "@expo/vector-icons";
 
 const IconItem = ({ gridData }) => {
   return (
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
   text: {
     paddingTop: verticalScale(10),
     textAlign: "center",
-    fontWeight: "400",
-    color: "grey",
+    fontWeight: "500",
+    color: "#424242",
   },
 });

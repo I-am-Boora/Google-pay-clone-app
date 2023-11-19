@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
   bussinessName: {
     marginTop: verticalScale(8),
     fontSize: scale(12),
+    textAlign: "center",
     fontWeight: "400",
     alignSelf: "center",
   },

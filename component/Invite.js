@@ -13,6 +13,7 @@ const Invite = () => {
             fontSize: scale(16),
             fontWeight: "500",
             marginVertical: verticalScale(10),
+            color: "#424242",
           }}
         >
           Invite friends to get ₹201
@@ -40,6 +41,7 @@ const Invite = () => {
               fontSize: scale(14),
               fontWeight: "500",
               marginVertical: verticalScale(10),
+              color: "#424242",
             }}
           >
             b33ai6t

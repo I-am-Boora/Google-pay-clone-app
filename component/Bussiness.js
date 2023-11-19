@@ -15,7 +15,7 @@ const Bussiness = () => {
         <View style={styles.rightHeaderContainer}>
           <SimpleLineIcons
             name="handbag"
-            size={18}
+            size={16}
             color="black"
             style={{ paddingHorizontal: scale(5) }}
           />
@@ -84,7 +84,8 @@ export default Bussiness;
 const styles = StyleSheet.create({
   container: {},
   title: {
-    fontSize: scale(20),
+    fontSize: scale(18),
+    color: "#424242",
     // marginVertical: verticalScale(10),
   },
   headerContainer: {
@@ -97,8 +98,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#b3e5fc",
     padding: moderateScale(8),
     borderRadius: scale(20),
+    alignItems: "center",
   },
-  text: { fontSize: scale(14), fontWeight: "400" },
+  text: { fontSize: scale(13), fontWeight: "400" },
 
   subContainer: {
     backgroundColor: "white",

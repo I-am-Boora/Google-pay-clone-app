@@ -7,7 +7,7 @@ import RechageItem from "./RechageItem";
 const BillRechagreRow = () => {
   return (
     <View>
-      <Text style={styles.title}>Bills, racharges and more</Text>
+      <Text style={styles.title}>Bills & racharges</Text>
       <View style={styles.container}>
         <View style={styles.billContainer}>
           <View style={styles.bussinessIcon}>
@@ -17,7 +17,7 @@ const BillRechagreRow = () => {
             />
           </View>
           <View style={styles.nameContainer}>
-            <Text style={{ fontSize: scale(16) }}>Surender</Text>
+            <Text style={{ fontSize: scale(15) }}>Surender</Text>
             <Text style={{ fontSize: scale(12), color: "red" }}>
               Bill due in 3 days
             </Text>
@@ -25,14 +25,15 @@ const BillRechagreRow = () => {
         </View>
 
         <View style={styles.paymentContainer}>
-          <Text style={styles.payment}>₹1,990</Text>
+          <Text style={styles.payment}>Pay ₹1,990</Text>
         </View>
       </View>
       <Text
         style={{
-          fontSize: scale(15),
+          fontSize: scale(13),
           paddingHorizontal: scale(20),
           fontWeight: "500",
+          color: "#424242",
           marginVertical: verticalScale(10),
         }}
       >
@@ -77,8 +78,10 @@ export default BillRechagreRow;
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: scale(20),
+    fontSize: scale(18),
     paddingHorizontal: scale(20),
+    color: "#424242",
+    marginBottom: verticalScale(8),
   },
   container: {
     flexDirection: "row",
@@ -103,13 +106,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: scale(20),
   },
   payment: {
-    fontSize: scale(13),
+    fontSize: scale(12),
     fontWeight: "500",
     color: "#01579b",
   },
   iconContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
+
     paddingHorizontal: scale(20),
     marginVertical: verticalScale(10),
   },

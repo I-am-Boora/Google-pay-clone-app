@@ -73,9 +73,10 @@ const styles = StyleSheet.create({
     borderRadius: scale(15),
   },
   image: {
+    // flex: 1,
     width: scale(30),
     height: verticalScale(30),
-    borderRadius: scale(15),
+    borderRadius: scale(30),
     resizeMode: "cover",
   },
 });

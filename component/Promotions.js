@@ -5,7 +5,7 @@ import { scale, verticalScale } from "react-native-size-matters";
 const Promotions = ({ name, image }) => {
   return (
     <>
-      <Text style={styles.title}>Promotions</Text>
+      <Text style={styles.title}>Offers and rewards</Text>
       <View style={styles.container}>
         <View style={{}}>
           <Image
@@ -48,13 +48,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: scale(20),
     alignItems: "center",
+
     // marginVertical: verticalScale(10),
   },
   title: {
-    fontSize: scale(20),
+    fontSize: scale(18),
     paddingHorizontal: scale(20),
     marginTop: verticalScale(10),
     marginBottom: verticalScale(20),
+    color: "#424242",
   },
   bussinessIcon: {
     width: scale(50),

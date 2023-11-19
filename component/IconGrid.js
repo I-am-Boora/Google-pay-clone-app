@@ -23,12 +23,12 @@ const IconGrid = () => {
     },
     {
       textName: "Self transfer",
-      iconName: require("../assets/images/self.png"),
+      iconName: require("../assets/images/user.png"),
     },
 
     {
       textName: "Pay bills",
-      iconName: require("../assets/images/invoice.png"),
+      iconName: require("../assets/images/script.png"),
     },
     {
       textName: "Mobile recharge",
