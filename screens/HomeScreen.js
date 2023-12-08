@@ -10,6 +10,7 @@ import Promotions from "../component/Promotions";
 import { scale, verticalScale } from "react-native-size-matters";
 import CardandloanSection from "../component/CardandloanSection";
 import Invite from "../component/Invite";
+import Upi from "../component/Upi";
 
 const HomeScreen = () => {
   return (
@@ -20,6 +21,7 @@ const HomeScreen = () => {
       >
         <Searchbar />
         <IconGrid />
+        <Upi />
         <People />
         <Bussiness />
         <BillRechagreRow />

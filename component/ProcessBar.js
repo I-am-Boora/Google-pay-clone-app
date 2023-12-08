@@ -37,7 +37,7 @@ const ProcessBar = () => {
         </Text>
       </View>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <ActivityIndicator size={"large"} color={"#01579b"} />
+        <ActivityIndicator size={"large"} color={"#42a5f5"} />
       </View>
     </>
   );

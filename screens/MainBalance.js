@@ -1,16 +1,42 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
+import React, { useState, useEffect } from "react";
 import { scale, verticalScale } from "react-native-size-matters";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { SafeAreaInsetsContext } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const MainBalance = () => {
+  const [showProcess, setShowProcess] = useState(true);
+  const [money, setMoney] = useState("");
   const { top } = SafeAreaInsetsContext._currentValue;
   const topBar = Math.round(top) + 10;
   const navigation = useNavigation();
-  return (
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setShowProcess(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(id);
+    };
+  }, []);
+  useEffect(() => {
+    const getmoney = async () => {
+      try {
+        const money = await AsyncStorage.getItem("@money");
+        setMoney(money);
+      } catch (error) {}
+    };
+    getmoney();
+  }, []);
+
+  return showProcess ? (
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <ActivityIndicator size={"large"} color={"#42a5f5"} />
+    </View>
+  ) : (
     <View style={{ marginTop: topBar, paddingHorizontal: scale(20) }}>
       <View
         style={{
@@ -40,7 +66,7 @@ const MainBalance = () => {
         <Text style={{ fontSize: scale(14), fontWeight: "500" }}>
           Account balance
         </Text>
-        <Text>₹80,455</Text>
+        <Text>₹{money}</Text>
       </View>
     </View>
   );

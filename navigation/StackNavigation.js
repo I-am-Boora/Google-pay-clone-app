@@ -5,11 +5,18 @@ import HomeScreen from "../screens/HomeScreen";
 import BalanceScreen from "../screens/BalanceScreen";
 import BalancePassword from "../screens/BalancePassword";
 import MainBalance from "../screens/MainBalance";
+import PasswordInputScreen from "../component/PasswordInputScreen";
+import InputBalance from "../screens/InputBalance";
 
 const StackNavigation = () => {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator>
+      {/* <Stack.Screen
+        name="PasswordScreen"
+        component={PasswordInputScreen}
+        options={{ headerShown: false }}
+      /> */}
       <Stack.Screen
         name="Home"
         component={HomeScreen}
@@ -28,6 +35,11 @@ const StackNavigation = () => {
       <Stack.Screen
         name="MainBalance"
         component={MainBalance}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="InputBalance"
+        component={InputBalance}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
