@@ -6,7 +6,7 @@ import {
   Keyboard,
   Alert,
 } from "react-native";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import { TextInput } from "react-native-gesture-handler";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -15,6 +15,14 @@ import Toast from "react-native-toast-message";
 const InputBalance = () => {
   const [balance, setBalance] = useState("");
   const [message, setMessage] = useState(true);
+  // const usernameInputRef = useRef(null);
+
+  // useEffect(() => {
+  //   // Set focus on the username input box when the component mounts
+  //   if (usernameInputRef.current) {
+  //     usernameInputRef.current.focus();
+  //   }
+  // }, []);
   const showToast = () => {
     Toast.show({
       type: message ? "success" : "error",
@@ -59,7 +67,9 @@ const InputBalance = () => {
         style={styles.input}
         keyboardType="phone-pad"
         value={balance}
+        autoFocus={true}
         onChangeText={(text) => setBalance(text)}
+        // useRef={usernameInputRef}
       />
       <Pressable style={styles.btn} onPress={handleBalance}>
         <Text style={{ fontSize: scale(16) }}>Add Balance</Text>

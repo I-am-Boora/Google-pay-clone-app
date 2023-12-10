@@ -2,10 +2,8 @@ import { StyleSheet, Text, View, Pressable, Image } from "react-native";
 import React, { useState } from "react";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
-import { colors } from "../constrait/color";
-import SinglePerson from "./SinglePerson";
 import { Entypo } from "@expo/vector-icons";
-import Promotions from "./Promotions";
+
 const Bussiness = () => {
   const [isClick, setIsClick] = useState(false);
   return (

@@ -7,16 +7,24 @@ import BalancePassword from "../screens/BalancePassword";
 import MainBalance from "../screens/MainBalance";
 import PasswordInputScreen from "../component/PasswordInputScreen";
 import InputBalance from "../screens/InputBalance";
+import LoginScreen from "../screens/LoginScreen";
+import PayContactScreen from "../screens/PayContactScreen";
+import ContactDetail from "../screens/ContactDetail";
 
 const StackNavigation = () => {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator>
-      {/* <Stack.Screen
-        name="PasswordScreen"
-        component={PasswordInputScreen}
+      <Stack.Screen
+        name="PayContact"
+        component={PayContactScreen}
         options={{ headerShown: false }}
-      /> */}
+      />
+      <Stack.Screen
+        name="ContactDetail"
+        component={ContactDetail}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="Home"
         component={HomeScreen}

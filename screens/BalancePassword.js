@@ -13,7 +13,7 @@ import { scale, verticalScale } from "react-native-size-matters";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-import { colors } from "../constrait/color";
+// import { colors } from "../constrait/color";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaInsetsContext } from "react-native-safe-area-context";
 

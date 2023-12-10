@@ -61,7 +61,7 @@ const People = () => {
                   alignItems: "center",
                   justifyContent: "center",
                 }}
-                key={index}
+                key={item}
               >
                 <View
                   style={[
